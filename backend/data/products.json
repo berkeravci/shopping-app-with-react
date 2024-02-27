@@ -1,0 +1,74 @@
+[{
+    "id":"1",
+    "title": "Brown eggs",
+    "type": "dairy",
+    "description": "Raw organic brown eggs in a basket",
+    "price": 28.1,
+    "rating": 4,
+    "image": "brown-egg.jpeg"
+  }, {
+    "id":"2",
+    "title": "Sweet fresh stawberry",
+    "type": "fruit",
+    "description": "Sweet fresh stawberry on the wooden table",
+    "price": 29.45,
+    "rating": 4,
+    "image": "strawberry.jpeg"
+  }, {
+    "id":"3",
+    "title": "Asparagus",
+    "type": "vegetable",
+    "description": "Asparagus with ham on the wooden table",
+    "price": 18.95,
+    "rating": 3,
+    "image": "asparagus.jpeg"
+  }, {
+    "id":"4",
+    "title": "Green smoothie",
+    "type": "dairy",
+    "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
+    "price": 17.68,
+    "rating": 4,
+    "image": "smoothie.jpeg"
+  }, {
+    "id":"5",
+    "title": "Raw legums",
+    "type": "vegetable",
+    "description": "Raw legums on the wooden table",
+    "price": 17.11,
+    "rating": 2,
+    "image": "legumes.jpeg"
+  }, {
+    "id":"6",
+    "title": "Baking cake",
+    "type": "dairy",
+    "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+    "price": 11.14,
+    "rating": 4,
+    "image": "cake.jpeg"
+  }, {
+    "id":"7",
+    "title": "Pesto with basil",
+    "type": "vegetable",
+    "description": "Italian traditional pesto with basil, chesse and oil",
+    "price": 18.19,
+    "rating": 2,
+    "image": "pesto.jpeg"
+  }, {
+    "id":"8",
+    "title": "Hazelnut in black ceramic bowl",
+    "type": "vegetable",
+    "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+    "price": 27.35,
+    "rating": 0,
+    "image": "hazelnut.jpeg"
+  }, {
+    "id":"9",
+    "title": "Healthy breakfast",
+    "type": "fruit",
+    "description": "Healthy breakfast set. rice cereal or porridge with berries and honey over rustic wood background",
+    "price": 13.02,
+    "rating": 2,
+    "image": "breakfast.jpeg"
+  }
+]

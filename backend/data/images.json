@@ -1,0 +1,38 @@
+[
+  {
+    "path": "asparagus.jpeg",
+    "caption": "Asparagus."
+  },
+  {
+    "path": "breakfast.jpeg",
+    "caption": "A healty breakfast."
+  },
+  {
+    "path": "brown-egg.jpeg",
+    "caption": "A brown egg."
+  },
+  {
+    "path": "cake.jpeg",
+    "caption": "A cake."
+  },
+  {
+    "path": "hazelnut.jpeg",
+    "caption": "A hazelnut bowl."
+  },
+  {
+    "path": "legumes.jpeg",
+    "caption": "Legumes."
+  },
+  {
+    "path": "pesto.jpeg",
+    "caption": "Pesto with basil."
+  },
+  {
+    "path": "smoothies.jpeg",
+    "caption": "A green smoothie."
+  },
+  {
+    "path": "strawberry.jpeg",
+    "caption": "A hazelnut bowl."
+  }
+]
