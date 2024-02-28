@@ -10,21 +10,24 @@ import CartItem from './CartItem.jsx';
 export default function Cart() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
-
+// total item price in cart
   const cartTotal = cartCtx.items.reduce(
     (totalPrice, item) => totalPrice + item.quantity * item.price,
     0
   );
-
+// closes the cart
   function handleCloseCart() {
     userProgressCtx.hideCart();
   }
-
+// goes to checkout step
   function handleGoToCheckout() {
+    
     userProgressCtx.showCheckout();
+    
   }
 
   return (
+    // modal that represents Cart
     <Modal
       className="cart"
       open={userProgressCtx.progress === 'cart'}

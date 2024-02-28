@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import { CartContextProvider } from './store/CartContext'
 import { UserProgressContextProvider } from './store/UserProgressContext'
 import './App.css'
@@ -14,26 +12,22 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import Shop from './Shop/Shop';
 import Products from './Shop/Products';
 import Cart from './Shop/Cart'
+import ProductDetails from './Shop/ProductDetails'
+import Checkout from './Shop/Checkout'
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Shop></Shop>,
-    // children: [
-    //   {
-    //     path: '/products',
-    //     element: <Products></Products>
-    //   }
-    // ]
+  
   },
   {
     path: "/products",
     element: <Products></Products>,
-    // children:[
-    //   {
-    //     path: "/cart",
-    //     element: <Cart></Cart>
-    //   }
-    // ]
+
+  },
+  {
+    path: "/products/:id",
+    element: <ProductDetails></ProductDetails>
   },
   {
     path: "/cart",
@@ -52,6 +46,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
       <Cart></Cart>
+      <Checkout></Checkout>
     </QueryClientProvider>
     
     </UserProgressContextProvider>

@@ -1,11 +1,13 @@
 import { createContext, useState } from 'react';
-
+// My context to handle user progress
 const UserProgressContext = createContext({
   progress: '', // 'cart', 'checkout'
   showCart: () => {},
   hideCart: () => {},
   showCheckout: () => {},
   hideCheckout: () => {},
+  hideSuccess: () => {},
+  showSuccess: () => {},
 });
 
 export function UserProgressContextProvider({ children }) {
@@ -28,12 +30,22 @@ export function UserProgressContextProvider({ children }) {
     setUserProgress('');
   }
 
+  function showSuccess() {
+    setUserProgress('success');
+  }
+
+  function hideSuccess() {
+    setUserProgress('');
+  }
+
   const userProgressCtx = {
     progress: userProgress,
     showCart,
     hideCart,
     showCheckout,
     hideCheckout,
+    hideSuccess,
+    showSuccess
   };
 
   return (

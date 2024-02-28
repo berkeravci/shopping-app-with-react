@@ -1,5 +1,5 @@
 import { currencyFormatter } from '../util/formatter.js';
-
+// each row in the cart(cart item)
 export default function CartItem({
   title,
   quantity,

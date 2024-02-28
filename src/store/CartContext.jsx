@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-
+// My Cart Context to handle removing, adding actions, there is no quantity for the initial step of the item. This context will add it.
 const CartContext = createContext({
   items: [],
   addItem: (item) => {},

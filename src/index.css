@@ -67,6 +67,10 @@ button:focus-visible {
   }
 } */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .modal {
   background-color: #e4ddd4;
   border-radius: 6px;
@@ -80,4 +84,114 @@ button:focus-visible {
 
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.55);
+}
+
+#product-details header {
+  width: 40rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#product-details header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+#product-details header button,
+#product-details header a {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #b6cad5;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.25rem;
+}
+
+#product-details-content {
+  width: 40rem;
+  margin: 2rem auto;
+  background-color: #343b3f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#product-details-content img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+#product-details-info {
+  padding: 0 3rem 3rem 3rem;
+}
+
+#product-details time {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+#product-details-location {
+  font-size: 1.15rem;
+  color: #b6cad5;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+
+.modal-actions .text-button:hover,
+.modal-actions .text-button:active {
+  color: #312c1d;
+}
+.nav-item {
+  position: absolute;
+  margin: 20px;
+  margin-left: 90px;
+
+  text-decoration: none;
+  color: #b6cad5;
+}
+
+#product-details-description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #b6cad5;
+}
+
+
+.control {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  width: 100%;
+  max-width: 20rem;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.control-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
 }

@@ -20,9 +20,10 @@ const Products = () => {
   const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity;
   }, 0);
-
+// opens cart
   function handleShowCart() {
     userProgressCtx.showCart();
+    
     setIsCartModalOpen(true);
     // content = <Cart></Cart>;
   }
@@ -51,7 +52,7 @@ const Products = () => {
             />
         );
     }
-
+// products mapping
     if (data) {
         content = (
             <ul className="products-list">
@@ -63,12 +64,6 @@ const Products = () => {
             </ul>
         );
     }
-
-    // if(isCartModalOpen){
-    //     content = (<Modal open={isCartModalOpen} onClose={handleCloseCart}>
-    //         <Cart />
-    //     </Modal>)
-    // }
     return (
         <>
             <h1 style={{marginLeft: "300px", position:"absolute"}}>Products</h1>

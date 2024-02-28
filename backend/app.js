@@ -27,17 +27,6 @@ app.get('/products', async (req, res) => {
   const shopFileContent = await fs.readFile('./data/products.json');
   let products = JSON.parse(shopFileContent);
 
-  // if (search) {
-  //   todos = todos.filter((todos) => {
-  //     const searchableText = `${todos.title} ${todos.description}`;
-  //     return searchableText.toLowerCase().includes(search.toLowerCase());
-  //   });
-  // }
-
-  // if (max) {
-  //   todos = todos.slice(todos.length - max, todos.length);
-  // }
-
   res.json({
     products: products.map((product) => ({
       id: product.id,
@@ -58,4 +47,45 @@ app.get('/products/images', async (req, res) => {
 });
 app.listen(3000, () => {
   console.log('Server running on port 3000');
+});
+app.get('/products/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const eventsFileContent = await fs.readFile('./data/products.json');
+  const events = JSON.parse(eventsFileContent);
+
+  const event = events.find((event) => event.id === id);
+
+  if (!event) {
+    return res
+      .status(404)
+      .json({ message: `For the id ${id}, no product could be found.` });
+  }
+
+  setTimeout(() => {
+    res.json({ event });
+  }, 1000);
+});
+
+
+app.post('/products', async (req, res) => {
+
+  const { order } = req.body;
+
+  
+
+  const ordersFileContent = await fs.readFile('./data/orders.json');
+  const orders = JSON.parse(ordersFileContent);
+
+  const newOrder = {
+     id: Math.round(Math.random() * 10000).toString(),
+     ...order,
+   };
+
+   orders.push(newOrder);
+
+   await fs.writeFile('./data/orders.json', JSON.stringify(orders));
+
+   res.json({ order: newOrder });
+   
 });

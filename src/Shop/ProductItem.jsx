@@ -8,7 +8,7 @@ export default function ProductItem({ product }) {
     function handleAddProducttoCart(){
         cartCtx.addItem(product)
     };
-
+// each product in the products.jsx
     return (
         <article className="product-item">
              <img src={`http://localhost:3000/${product.image}`} alt={product.title} />
